@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function HomePage2() {
@@ -35,9 +36,11 @@ export default function HomePage2() {
             We're here to support your work with reliable equipment you can
             trust.
           </p>
-          <button className="bg-[#251bab] text-white py-3 px-6 rounded-2xl w-[80%] md:w-[60%] mx-auto md:mx-0 text-lg font-semibold">
-            Learn more
-          </button>
+          <Link href="/about">
+            <button className="bg-[#251bab] text-white py-3 px-6 rounded-2xl w-[80%] md:w-[60%] mx-auto md:mx-0 text-lg ">
+              Learn more
+            </button>
+          </Link>
         </div>
       </div>
     </div>

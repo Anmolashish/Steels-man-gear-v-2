@@ -8,21 +8,31 @@ export default function HomePage5() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    let isMounted = true;
+
     const loopScroll = async () => {
-      while (true) {
-        await controls.start({
-          x: "-50%", // Shift by half the width (because of duplication)
-          transition: { duration: 40, ease: "linear" },
-        });
-        controls.set({ x: "0%" }); // Instantly reset to starting position
-      }
+      if (!isMounted) return;
+      await controls.start({
+        x: "-50%",
+        transition: { duration: 40, ease: "linear" },
+      });
+
+      if (!isMounted) return;
+      controls.set({ x: "0%" });
+
+      // Restart animation
+      requestAnimationFrame(loopScroll);
     };
 
     loopScroll();
+
+    return () => {
+      isMounted = false; // Cleanup function to prevent state updates on unmounted component
+    };
   }, [controls]);
 
   return (
-    <div className="h-[85vh]  w-full bg-gradient-to-b from-gray-100 to-blue-200">
+    <div className="h-[85vh] w-full bg-gradient-to-b from-gray-100 to-blue-200">
       {/* Header Section */}
       <div className="flex flex-col home-page-3-heading justify-center items-center pt-10">
         <h3 className="text-5xl font-black text-blue-800 max-md:text-center">

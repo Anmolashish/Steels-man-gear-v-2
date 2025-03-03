@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -22,9 +23,11 @@ const HeroSection = () => {
             solutions that not only meet but exceed the demands of modern
             industry.
           </p>
-          <button className="mt-6 bg-blue-900 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition">
-            See all products<span className="text-lg">→</span>
-          </button>
+          <Link href="/products">
+            <button className="mt-6 bg-blue-900 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition">
+              See all products<span className="text-lg">→</span>
+            </button>
+          </Link>
 
           {/* Customer Info */}
           <div className="mt-8 flex items-center gap-4">

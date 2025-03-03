@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function HomePage1() {
@@ -16,7 +17,7 @@ export default function HomePage1() {
               service.
             </p>
             <button className="bg-[#251bab] text-[#ffffff] p-[12px] rounded-2xl w-[50%] text-lg font-semibold">
-              Get a Quote
+              <Link href={"/contact"}>Get a Quote</Link>
             </button>
           </div>
           <div className="image-data relative w-[40%] max-md:w-[100%] max-md:flex max-md:justify-center max-md:h-[10px]">

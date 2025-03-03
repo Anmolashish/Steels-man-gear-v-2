@@ -51,10 +51,10 @@ export default function ContactFAQ() {
 
       {/* Floating Forms Section */}
       <div className="flex justify-center items-center bg-[#041A33] h-[40vh] w-full relative">
-        <div className="floating-data h-[70vh] w-[80%] bg-blue-600 absolute bottom-[10vh] flex rounded-2xl text-white max-md:flex-col max-md:justify-between max-md:items-center">
+        <div className="floating-data h-[70vh] w-[80%] bg-blue-600 absolute bottom-[10vh] flex rounded-2xl text-white max-md:flex-col max-md:justify-between max-md:items-center max-md:min-h-[70vh]">
           {/* Contact Form */}
           <div className="flex justify-center items-center w-[50%] h-full max-md:w-full">
-            <div className="w-[90%] h-[90%] bg-white rounded-2xl p-6 shadow-lg text-blue-900">
+            <div className="w-[90%] min-h-[90%] bg-white rounded-2xl p-6 shadow-lg text-blue-900">
               <h3 className="text-3xl font-bold mb-4 text-center">
                 Quick query form
               </h3>

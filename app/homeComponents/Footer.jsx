@@ -77,18 +77,18 @@ export default function Footer() {
                   href="mailto:info@steelmans.com"
                   className="hover:text-white"
                 >
-                  <span className="font-semibold">Email :</span>
+                  <span className="font-semibold">Email : </span>
                   info@steelmans.com
                 </a>
               </li>
               <li>
                 <a href="tel:+91 1757961320" className="hover:text-white">
-                  <span className="font-semibold">Phone :</span> +91 1757961320
+                  <span className="font-semibold">Phone : </span> +91 1757961320
                 </a>
               </li>
               <li>
-                <Link href="#" className="hover:text-white">
-                  <span className="font-semibold">Add :</span>
+                <Link href="/about" className="hover:text-white">
+                  <span className="font-semibold">Add : </span>
                   183 Ajit Nagar, Patiala 147001 Punjab (INDIA)
                 </Link>
               </li>
@@ -105,18 +105,18 @@ export default function Footer() {
             <img
               src="https://steelmansgears.com/imgs/chamfer_hobs.jpg"
               alt="shoe1"
-              className="w-[150px] h-[150px] rounded-lg object-cover"
+              className=" w-[70%] max-w-[150px] max-h-[150px] rounded-lg object-cover"
             />
 
             <img
               src="https://steelmansgears.com/imgs/involute-gear-hobs-big.jpg"
               alt="shoe3"
-              className=" w-[150px] h-[150px] rounded-lg object-cover"
+              className=" w-[70%] max-w-[150px] max-h-[150px] rounded-lg object-cover"
             />
             <img
               src="https://steelmansgears.com/imgs/inserted_blade_gear_hobs.jpg"
               alt="shoe2"
-              className=" w-[150px] h-[150px] rounded-lg object-cover"
+              className=" w-[70%] max-w-[150px] max-h-[150px] rounded-lg object-cover"
             />
           </div>
         </div>
@@ -124,9 +124,11 @@ export default function Footer() {
         {/* Footer Middle Section */}
         <div className="flex justify-between items-center border-t border-gray-500 mt-8 pt-7 max-sm:flex-col max-sm:text-center">
           <div className="flex flex-col items-center space-x-2">
-            <h3 className="text-2xl font-bold text-white">
-              <img src="/Images/logo2.png" alt="" />
-            </h3>
+            <Link href={"/"}>
+              <h3 className="text-2xl font-bold text-white">
+                <img src="/Images/logo2.png" alt="" />
+              </h3>
+            </Link>
           </div>
           <div className="flex justify-between text-gray-400 text-sm mt-6 gap-8 max-sm:flex-col max-sm:text-center">
             <div className="flex space-x-6">
