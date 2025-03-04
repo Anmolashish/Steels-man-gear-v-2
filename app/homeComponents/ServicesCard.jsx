@@ -11,7 +11,9 @@ export default function ServicesCard(props) {
       </div>
       <div className="service-text">
         <h2 className="text-xl font-bold text-gray-900">{props.name}</h2>
-        <p className="text-sm text-gray-600">{props.description}</p>
+        <p className="text-sm text-gray-600 text-justify">
+          {props.description}
+        </p>
       </div>
     </div>
   );

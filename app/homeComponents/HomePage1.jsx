@@ -8,7 +8,7 @@ export default function HomePage1() {
         <div className="floating-data h-[75vh] w-[80%] bg-[#009CFE] absolute top-[20vh] flex rounded-2xl text-white max-md:flex-col max-md:justify-between max-md:items-center">
           <div className="h-[10px]"></div>
           <div className="text-data w-[60%] flex justify-center flex-col pl-[5%] max-md:w-[100%] max-md:items-center max-md:text-center max-md:pl-[0] z-10">
-            <h1 className="heading text-8xl font-black w-[80%] leading-[80px] max-md:text-6xl md:text-7xl xl:text-8xl [text-shadow:_0_8px_8px_rgb(99_102_241_/_0.8)] ">
+            <h1 className="heading text-8xl font-black w-[80%] leading-[80px] max-md:text-6xl md:text-7xl xl:text-7xl [text-shadow:_0_8px_8px_rgb(99_102_241_/_0.8)] ">
               The <span className="text-[#251bab]">Gear</span> Experts You Can
               <span className="text-[#201981]"> Trust</span>
             </h1>
