@@ -1,35 +1,23 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import ReviewCard from "./ReviewCard"; // Import your ReviewCard component
 
 export default function HomePage5() {
-  const controls = useAnimation();
   const containerRef = useRef(null);
+  const [animateX, setAnimateX] = useState(0);
 
   useEffect(() => {
-    let isMounted = true;
-
-    const loopScroll = async () => {
-      if (!isMounted) return;
-      await controls.start({
-        x: "-50%",
-        transition: { duration: 40, ease: "linear" },
-      });
-
-      if (!isMounted) return;
-      controls.set({ x: "0%" });
-
-      // Restart animation
-      requestAnimationFrame(loopScroll);
+    const loopScroll = () => {
+      setAnimateX(-50); // Move left by 50% each cycle
+      setTimeout(() => setAnimateX(0), 40000); // Reset after animation duration
     };
 
-    loopScroll();
+    const interval = setInterval(loopScroll, 40000); // Loop every 40s
+    loopScroll(); // Start immediately
 
-    return () => {
-      isMounted = false; // Cleanup function to prevent state updates on unmounted component
-    };
-  }, [controls]);
+    return () => clearInterval(interval); // Cleanup
+  }, []);
 
   return (
     <div className="h-[85vh] w-full bg-gradient-to-b from-gray-100 to-blue-200">
@@ -47,8 +35,9 @@ export default function HomePage5() {
       <div className="relative overflow-hidden w-full h-[50vh] flex items-center select-none px-4">
         <motion.div
           className="flex gap-[20px] w-max"
-          animate={controls}
           ref={containerRef}
+          animate={{ x: `${animateX}%` }} // Directly animate X position
+          transition={{ duration: 40, ease: "linear", repeat: Infinity }} // Continuous animation
         >
           {/* Double the ReviewCards for Seamless Loop */}
           {[...Array(2)].map((_, i) => (
