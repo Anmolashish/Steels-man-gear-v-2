@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import ProductsData from "../productsData/Context";
 import ProductPage2 from "./ProductPage2";
+import ProductPage4 from "./ProductPage4";
 
 export default function SingleProduct(props) {
   const { data } = useContext(ProductsData);
@@ -20,13 +21,28 @@ export default function SingleProduct(props) {
   const description = matchedItem
     ? matchedItem.description
     : "No Description Found";
+  const image = matchedItem ? matchedItem.image : "No Name Found";
+  const quality = matchedItem ? matchedItem.quality : "No Name Found";
+  const production = matchedItem ? matchedItem.production : "No Name Found";
+  const manufacturing = matchedItem
+    ? matchedItem.manufacturing
+    : "No Name Found";
+  const heading = matchedItem ? matchedItem.heading : "No Name Found";
 
   console.log(name);
   console.log(description);
 
   return (
-    <div>
+    <div className="mb-[100px]">
       <ProductPage2 name={name} description={description} />
+      <ProductPage4
+        image={image}
+        name={name}
+        quality={quality}
+        production={production}
+        manufacturing={manufacturing}
+        heading={heading}
+      />
     </div>
   );
 }
