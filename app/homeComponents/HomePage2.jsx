@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HomePage2() {
   return (
-    <div className="home-page-2 min-h-screen w-full flex justify-center items-center px-4 mb-8 max-md:mb-11">
+    <div className="home-page-2 min-h-screen max-md:min-h-[90vh] w-full flex justify-center items-center px-4 mb-8 max-md:mb-0">
       <div className="home-page-2-container w-[90%] max-w-[1200px] flex flex-wrap justify-center items-center gap-8">
         {/* Image Section */}
         <div className="home-page-2-image w-full md:w-[44%] flex justify-center max-md:hidden">

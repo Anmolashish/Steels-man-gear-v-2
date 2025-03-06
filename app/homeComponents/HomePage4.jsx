@@ -7,15 +7,15 @@ const HeroSection = () => {
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Side (Text Content) */}
         <div>
-          <h1 className="text-5xl font-bold leading-tight text-blue-900">
+          <h1 className="text-5xl font-bold leading-tight text-blue-900 max-md:text-center">
             Quality Gear Solutions: Built to Perform
           </h1>
-          <p className="text-sm text-gray-600 mt-4">
+          <p className="text-sm text-gray-600 mt-4 max-md:text-center">
             {" "}
             Engineered to meet the demands of diverse industries, with solutions
             tailored to your requirements.
           </p>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 mt-4 max-md:text-center">
             Welcome to our comprehensive selection of precision-engineered
             gears, where innovation meets uncompromising quality. At Steelman
             Gears, we understand that the heart of any mechanical system lies in
@@ -23,32 +23,38 @@ const HeroSection = () => {
             solutions that not only meet but exceed the demands of modern
             industry.
           </p>
-          <Link href="/products">
-            <button className="mt-6 bg-blue-900 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition">
+          <Link href="/products" className="max-md:flex max-md:justify-center">
+            <button className="mt-6 bg-blue-900 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 transition duration-300">
               See all products<span className="text-lg">→</span>
             </button>
           </Link>
 
           {/* Customer Info */}
-          <div className="mt-8 flex items-center gap-4">
-            <div className="bg-black text-white p-4 rounded-lg flex items-center gap-3">
-              <img
-                src="https://templatekit.jegtheme.com/autofix/wp-content/uploads/sites/422/2023/10/mechanic-men-8RQDFKJ.png"
-                alt="Customer"
-                className="w-16  rounded-full"
-              />
-              <div className="text-right">
-                <p className="text-2xl font-bold">Explore</p>
-                <p className="text-sm ml-[20%] w-[80%]">
-                  our extensive gear product catalog
-                </p>
+          <div className="mt-8 flex items-center max-md:justify-center gap-4">
+            <Link href={"/products"}>
+              <div className="bg-black text-white p-4 rounded-lg flex items-center gap-3">
+                <img
+                  src="https://templatekit.jegtheme.com/autofix/wp-content/uploads/sites/422/2023/10/mechanic-men-8RQDFKJ.png"
+                  alt="Customer"
+                  className="w-16  rounded-full"
+                />
+                <div className="text-right">
+                  <p className="text-2xl font-bold">Explore</p>
+                  <p className="text-sm ml-[20%] w-[80%]">
+                    our extensive gear product catalog
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
+
             <div>
               <p className="font-bold">Checkout</p>
-              <a href="#" className="text-green-600 font-semibold">
+              <Link
+                href="products/gear-cutters"
+                className="text-green-600 font-semibold"
+              >
                 SHARPER CUTTERS
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -40,18 +40,21 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Category</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/gear-hobs" className="hover:text-white">
+                <Link href="/products/gear-hobs" className="hover:text-white">
                   Gear hobs
                 </Link>
               </li>
               <li>
-                <Link href="/gear-cutters" className="hover:text-white">
+                <Link
+                  href="/products/gear-cutters"
+                  className="hover:text-white"
+                >
                   Gear cutters
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/straight-bevel-gear-cutters"
+                  href="/products/straight-bevel-gear-cutters"
                   className="hover:text-white"
                 >
                   Bevel gear cutters
@@ -59,7 +62,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/spiral-bevel-gear-cutters"
+                  href="/products/spiral-bevel-gear-cutters"
                   className="hover:text-white"
                 >
                   Custom gear
@@ -87,7 +90,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white">
+                <Link href="/contact" className="hover:text-white">
                   <span className="font-semibold">Add : </span>
                   183 Ajit Nagar, Patiala 147001 Punjab (INDIA)
                 </Link>

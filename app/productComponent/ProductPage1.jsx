@@ -7,7 +7,7 @@ export default function ProductPage1() {
 
   return (
     <>
-      <div className="sticky top-[10vh] z-50">
+      <div className="sticky top-[10vh] z-40">
         <div className="w-full h-[10vh] bg-[#041A33] relative flex justify-center items-center">
           <div className="categories h-[10vh] text-lg w-[80%] rounded-full top-[5vh] z-20 absolute bg-blue-500">
             <div className="text-white flex justify-evenly h-full items-center font-semibold max-lg:hidden">
