@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Steelmans gears | Home",
-  description: "This is a page for the Home page of the Steelmans gears ",
+  title: "Steelman Gears: High-Quality Gear Solutions ",
+  description:
+    "Steelman Gears delivers precision-engineered gears for diverse industries. Specializing in custom and standard gears, we ensure quality and performance. Contact us today! ",
 };
 
 export default function RootLayout({ children }) {

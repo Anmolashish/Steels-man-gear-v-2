@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ContactPage2() {
@@ -11,7 +12,7 @@ export default function ContactPage2() {
       </div>
       <div className="max-md:flex max-md:items-center max-md:justify-center">
         <div className="contact-options flex max-md:flex-col max-md:gap-4 max-md:justify-center justify-evenly mt-10">
-          <div className="flex items-center gap-2">
+          <a href="tel:+91 1757961320" className="flex items-center gap-2">
             <div className="contact-icon rounded-full bg-blue-900 w-[40px] flex justify-center items-center h-[40px]">
               <img
                 width="20"
@@ -26,8 +27,11 @@ export default function ContactPage2() {
               </div>
               <div className="contact-card-data">+91 1757961320</div>
             </div>
-          </div>
-          <div className="flex items-center gap-2">
+          </a>
+          <a
+            href="mailto:sales@steelmans.com"
+            className="flex items-center gap-2"
+          >
             <div className="contact-icon rounded-full bg-blue-900 flex justify-center items-center w-[40px] h-[40px]">
               <img
                 width="20"
@@ -42,7 +46,7 @@ export default function ContactPage2() {
               </div>
               <div className="contact-card-data">sales@steelmans.com</div>
             </div>
-          </div>
+          </a>
           <div className="flex items-center gap-2">
             <div className="contact-icon rounded-full bg-blue-900 flex justify-center items-center w-[40px] h-[40px]">
               <img
