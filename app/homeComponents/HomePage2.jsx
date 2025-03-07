@@ -37,7 +37,7 @@ export default function HomePage2() {
             trust.
           </p>
           <Link href="/about">
-            <button className="bg-[#251bab] text-white py-3 px-6 rounded-2xl w-[80%] md:w-[60%] mx-auto md:mx-0 text-lg ">
+            <button className="bg-blue-800 text-white py-3 px-6 rounded-2xl w-[80%] md:w-[60%] mx-auto md:mx-0 text-lg ">
               Learn more
             </button>
           </Link>

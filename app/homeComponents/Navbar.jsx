@@ -114,7 +114,7 @@ export default function Navbar() {
           />
         </div>
       </div>
-      <div className="sidebar duration-300 fixed h-screen top-0 z-50 w-[250px] bg-[rgba(16,0,85,0.59)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[5.5px] border border-[rgba(255,255,255,0.18)] hidden max-md:flex flex-col transform translate-x-[-100%]">
+      <div className="sidebar duration-300 fixed h-full top-0 z-50 w-[250px] bg-[rgba(16,0,85,0.59)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[5.5px] border border-[rgba(255,255,255,0.18)] hidden max-md:flex flex-col transform translate-x-[-100%]">
         <div className="sidebar-header flex flex-col justify-center p-[20px]">
           <div className="sidebar-logo w-full flex justify-center text-center">
             <Link href="/">
@@ -129,6 +129,7 @@ export default function Navbar() {
             <div
               className="nav-option hover:text-[#00C3FE] tracking-widest
             transition duration-300 ease-in-out cursor-pointer py-3 m-1 border-b-[1px] border-white"
+              onClick={handleClick}
             >
               <Link
                 href="/"
@@ -140,6 +141,7 @@ export default function Navbar() {
             <div
               className="nav-option hover:text-[#00C3FE] tracking-widest
             transition duration-300 ease-in-out cursor-pointer py-3 m-1 border-b-[1px] border-white"
+              onClick={handleClick}
             >
               <Link
                 href="/about"
@@ -151,6 +153,7 @@ export default function Navbar() {
             <div
               className="nav-option hover:text-[#00C3FE] tracking-widest
             transition duration-300 ease-in-out cursor-pointer py-3 m-1 border-b-[1px] border-white"
+              onClick={handleClick}
             >
               <Link
                 href="/products"
@@ -162,6 +165,7 @@ export default function Navbar() {
             <div
               className="nav-option hover:text-[#00C3FE] tracking-widest
             transition duration-300 ease-in-out cursor-pointer py-3 m-1 border-b-[1px] border-white"
+              onClick={handleClick}
             >
               <Link
                 href="/contact"

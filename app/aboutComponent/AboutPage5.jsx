@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function AboutPage5() {
@@ -11,9 +12,11 @@ export default function AboutPage5() {
           </h4>
         </div>
         <div className="button">
-          <button className="py-[10px] px-[15px] bg-white text-blue-600 font-bold max-md:text-sm rounded-2xl text-2xl">
-            Explore Our Products
-          </button>
+          <Link href={"/products"}>
+            <button className="py-[10px] px-[15px] bg-white text-blue-600 font-bold max-md:text-sm rounded-2xl text-2xl">
+              Explore Our Products
+            </button>
+          </Link>
         </div>
       </div>
     </div>

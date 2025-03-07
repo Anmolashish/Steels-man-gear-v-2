@@ -53,7 +53,7 @@ const HeroSection = () => {
                 href="products/gear-cutters"
                 className="text-green-600 font-semibold"
               >
-                SHARPER CUTTERS
+                GEAR CUTTERS
               </Link>
             </div>
           </div>

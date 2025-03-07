@@ -141,7 +141,7 @@ export default function Footer() {
                 className="hover:text-white"
               >
                 Steelmans Broaches Pvt. Ltd.{" "}
-                <span className="font-bold">{"{www.steelmans.com}"}</span>
+                <span className="font-bold">{"(www.steelmans.com)"}</span>
               </a>
             </div>
             <div className="flex space-x-6">
@@ -152,7 +152,7 @@ export default function Footer() {
               >
                 Steelmans Cutting Tools.{" "}
                 <span className="font-bold">
-                  {"{www.steelmanscuttingtools.com}"}
+                  {"(www.steelmanscuttingtools.com)"}
                 </span>
               </a>
             </div>

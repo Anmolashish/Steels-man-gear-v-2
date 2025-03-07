@@ -124,9 +124,9 @@ export default function ContactFAQ() {
                       </span>
                     </button>
                     {item.open && (
-                      <li className="text-white font-thin pt-2 border-t border-white ">
+                      <p className="text-white font-thin pt-2 border-t border-white ">
                         {item.answer}
-                      </li>
+                      </p>
                     )}
                   </div>
                 ))}

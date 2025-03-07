@@ -5,12 +5,12 @@ export default function ProductCard(props) {
   return (
     <Link
       href={`/products/${props.slug}/${props.subSlug}`}
-      className="h-fit w-[40%] border-2 rounded-xl  flex justify-between gap-4 max-md:w-[90%] items-center p-3 shadow-lg"
+      className="h-fit min-h-[120px] w-[40%] border-2 rounded-xl  flex justify-between gap-4 max-md:w-[90%] items-center p-3 shadow-lg"
     >
-      <div className="image w-[60%] min-w-[250px] h-full min-h-[100px] max-h-[250px] max-lg:min-w-[100px] border-2 rounded-xl p-3 bg-slate-100 text-center flex justify-center items-center">
+      <div className="image w-[60%] min-w-[250px] h-[200px] max-md:h-[180px] max-lg:min-w-[100px] border-2 rounded-xl p-3 bg-slate-100 text-center flex justify-center items-center">
         <img src={props.image} alt="" className="h-[150px]" />
       </div>
-      <div className="info flex flex-col justify-between gap-4 w-full">
+      <div className="info flex flex-col justify-between gap-4 w-full h-full min-h-[180px]">
         <div className="">
           <h2 className="text-lg font-bold">{props.name}</h2>
           <p className="text-xs">{props.description}</p>
