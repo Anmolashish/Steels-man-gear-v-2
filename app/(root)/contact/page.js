@@ -1,6 +1,7 @@
 import AboutPage5 from "@/app/aboutComponent/AboutPage5";
 import ContactPage1 from "@/app/contactComponent/ContactPage1";
 import ContactPage2 from "@/app/contactComponent/ContactPage2";
+import ContactFAQ from "@/app/homeComponents/HomePage6";
 import PagesHeader from "@/app/homeComponents/PagesHeader";
 
 export default function page() {
@@ -14,7 +15,8 @@ export default function page() {
       />
       <ContactPage1 />
       <ContactPage2 />
-      <AboutPage5 />
+
+      <ContactFAQ />
     </>
   );
 }

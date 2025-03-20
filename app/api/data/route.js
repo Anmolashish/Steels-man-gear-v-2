@@ -1,10 +1,7 @@
-"use client";
-import React from "react";
-import { createContext } from "react";
-
-const ProductsData = createContext();
-
-export function Context({ children }) {
+// app/api/data/route.js
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const slug = searchParams.get("slug");
   const data = [
     {
       id: 1,
@@ -142,11 +139,11 @@ export function Context({ children }) {
       slug: "gear-cutters",
       name: "Gear Cutters",
       description: `Gear Shaper cutters are designed and produced for cutting and finishing for any type of gear, internal or external, spur or helical. They can also be designed to cut splines, serrations, sprockets or other involute forms.   
-        Module:  0.50 to 20.00   
-        Pressure Angle: 140 30 to 300    
-        Accuracy: Class “AA” & “A” as per DIN, BS, ASA standards specification    
-        Special Features: Chamfering, semi-topping, protuberance, flat or fillet roots   
-        Spur & Helical: With all standard & non-standard profiles  `,
+            Module:  0.50 to 20.00   
+            Pressure Angle: 140 30 to 300    
+            Accuracy: Class “AA” & “A” as per DIN, BS, ASA standards specification    
+            Special Features: Chamfering, semi-topping, protuberance, flat or fillet roots   
+            Spur & Helical: With all standard & non-standard profiles  `,
       items: [
         {
           id: 21,
@@ -321,7 +318,7 @@ export function Context({ children }) {
           name: "Pinion Finishing Blades (Concave & Convex)",
           heading: "Profile Finishing Blades for Pinion Gears",
           subSlug: "pinion-finishing-blades-concave-convex",
-          image: "/Images/No_Image_Available.jpg",
+          image: "https://steelmansgears.com/imgs/pinion_finishing_blades.jpg",
           description:
             "Specifications include Point Width, Type of cutter body used, Point Width of Roughing Blades, Pressure Angle, Top Term Letter, Blade Edge Radius, and Number of Blades per Set.",
           quality:
@@ -395,9 +392,10 @@ export function Context({ children }) {
       ],
     },
   ];
-  return (
-    <ProductsData.Provider value={{ data }}>{children}</ProductsData.Provider>
-  );
-}
 
-export default ProductsData;
+  const filteredData = slug
+    ? data.filter((category) => category.slug === slug)
+    : data;
+
+  return Response.json(filteredData);
+}

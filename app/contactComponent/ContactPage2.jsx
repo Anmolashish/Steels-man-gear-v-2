@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ContactPage2() {
   return (
-    <div className="w-full min-h-[45vh] p-4 flex flex-col gap-2">
+    <div className="w-full min-h-[45vh] p-4 flex flex-col gap-2 bg-gradient-to-b from-white to-blue-200">
       <div className="header text-4xl text-center font-bold ">
         Have a Question? <br className="flex md:hidden" /> Contact Us!
       </div>
