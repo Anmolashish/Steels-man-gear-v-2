@@ -79,11 +79,11 @@ export default function Navbar() {
         <div className="white-divider w-[80%] h-[1px] bg-[#97A0AA] absolute bottom-0"></div>
       </div>
       <div className="lower-navbar z-20 sticky top-0 h-[12vh] w-full bg-[#041A33] flex justify-between items-center px-[10%]">
-        <div className="navbar-logo w-[120px]">
+        <div className="navbar-logo w-[40%]">
           <Link href="/">
             <img
               className="w-[100%]"
-              src="/Images/logo2.png"
+              src="/Images/logo-2.png"
               alt="Steelmans gears logo"
             />
           </Link>
