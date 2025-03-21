@@ -10,6 +10,7 @@ export default function ContactFAQ() {
     comment: "",
   });
 
+  const [errors, setErrors] = useState({}); // State to track validation errors
   const [status, setStatus] = useState("");
 
   const [faq, setFaq] = useState([
@@ -55,36 +56,88 @@ export default function ContactFAQ() {
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // Validation rules
+    if (name === "name") {
+      // Allow only alphabets and spaces
+      if (/^[A-Za-z\s]*$/.test(value)) {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else if (name === "email") {
+      // Basic email validation
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || value === "") {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else if (name === "phone" || name === "fax") {
+      // Allow only numbers and limit to 10 digits
+      if (/^\d*$/.test(value) && value.length <= 10) {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!formData.name || !/^[A-Za-z\s]+$/.test(formData.name)) {
+      newErrors.name =
+        "Please enter a valid name (only alphabets and spaces allowed).";
+    }
+
+    // Email validation
+    if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Phone validation
+    if (!formData.phone || !/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number.";
+    }
+
+    // Fax validation (optional)
+    if (formData.fax && !/^\d{10}$/.test(formData.fax)) {
+      newErrors.fax = "Please enter a valid 10-digit fax number.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const res = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await res.json();
-
-      if (result.success) {
-        alert("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          fax: "",
-          comment: "",
+    if (validateForm()) {
+      try {
+        const res = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         });
-      } else {
-        alert("Failed to send message. Please try again.");
+
+        const result = await res.json();
+
+        if (result.success) {
+          alert("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            fax: "",
+            comment: "",
+          });
+        } else {
+          alert("Failed to send message. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error sending email:", error);
+        alert("Error sending message. Try again later.");
       }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Error sending message. Try again later.");
+    } else {
+      console.log("Form has errors:", errors);
     }
   };
 
@@ -112,6 +165,10 @@ export default function ContactFAQ() {
                   className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
+                {errors.name && (
+                  <p className="text-red-500 text-sm">{errors.name}</p>
+                )}
+
                 <input
                   type="email"
                   name="email"
@@ -121,6 +178,10 @@ export default function ContactFAQ() {
                   className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
+
                 <input
                   type="tel"
                   name="phone"
@@ -130,6 +191,10 @@ export default function ContactFAQ() {
                   className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm">{errors.phone}</p>
+                )}
+
                 <input
                   type="tel"
                   name="fax"
@@ -138,6 +203,10 @@ export default function ContactFAQ() {
                   onChange={handleChange}
                   className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                {errors.fax && (
+                  <p className="text-red-500 text-sm">{errors.fax}</p>
+                )}
+
                 <textarea
                   name="comment"
                   placeholder="Comment"
@@ -147,6 +216,7 @@ export default function ContactFAQ() {
                   rows="2"
                   required
                 ></textarea>
+
                 <button
                   type="submit"
                   className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
