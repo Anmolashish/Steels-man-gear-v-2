@@ -79,7 +79,7 @@ export default function Navbar() {
         <div className="white-divider w-[80%] h-[1px] bg-[#97A0AA] absolute bottom-0"></div>
       </div>
       <div className="lower-navbar z-20 sticky top-0 h-[12vh] w-full bg-[#041A33] flex justify-between items-center px-[10%]">
-        <div className="navbar-logo w-[40%] min-w-[250px]">
+        <div className="navbar-logo w-[30%]  min-w-[250px]">
           <Link href="/">
             <img
               className="w-[100%]"

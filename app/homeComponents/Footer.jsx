@@ -126,10 +126,17 @@ export default function Footer() {
 
         {/* Footer Middle Section */}
         <div className="flex justify-between items-center border-t border-gray-500 mt-8 pt-7 max-sm:flex-col max-sm:text-center">
-          <div className="flex flex-col items-center space-x-2">
-            <Link href={"/"}>
-              <h3 className="text-2xl font-bold text-white">
-                <img src="/Images/logo2.png" alt="" />
+          <div className="flex flex-col items-center justify-center w-[30%] space-x-2">
+            <Link
+              href={"/"}
+              className="w-full flex flex-col items-center justify-center"
+            >
+              <h3 className="text-2xl font-bold text-white w-full flex flex-col items-center justify-center">
+                <img
+                  src="/Images/logo-2.png"
+                  alt=""
+                  className="w-full min-w-[200px]"
+                />
               </h3>
             </Link>
           </div>
