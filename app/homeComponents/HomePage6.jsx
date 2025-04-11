@@ -150,7 +150,7 @@ export default function ContactFAQ() {
       <div className="flex justify-center items-center bg-[#041A33] h-[40vh] w-full relative">
         <div className="floating-data h-[70vh] w-[80%] bg-blue-600 absolute bottom-[10vh] flex rounded-2xl text-white max-md:flex-col max-md:justify-between max-md:items-center max-md:min-h-[70vh]">
           {/* Contact Form */}
-          <div className="flex justify-center items-center w-[50%] h-full max-md:w-full">
+          <div className="flex justify-center items-center w-full h-full max-md:w-full">
             <div className="w-[90%] min-h-[90%] bg-white rounded-2xl p-6 shadow-lg text-blue-900">
               <h3 className="text-3xl font-bold mb-4 text-center">
                 Quick query form
@@ -228,47 +228,6 @@ export default function ContactFAQ() {
           </div>
 
           {/* FAQ Section */}
-          <div className="flex justify-center items-center w-[50%] h-full max-md:hidden">
-            <div className="w-[90%] h-[90%] rounded-2xl p-6 text-white">
-              <h3 className="text-3xl font-bold mb-5 text-center">
-                Frequently Asked Questions
-              </h3>
-              <div className="space-y-3">
-                {faq.map((item, index) => (
-                  <div key={index} className="border-b pb-2">
-                    <button
-                      onClick={() => toggleFAQ(index)}
-                      className="w-full text-left text-lg flex justify-between"
-                    >
-                      {item.question}
-                      <span>
-                        {item.open ? (
-                          <img
-                            width="24"
-                            height="24"
-                            src="https://img.icons8.com/material-two-tone/24/FFFFFF/collapse-arrow--v2.png"
-                            alt="collapse-arrow--v2"
-                          />
-                        ) : (
-                          <img
-                            width="24"
-                            height="24"
-                            src="https://img.icons8.com/material-rounded/24/FFFFFF/expand-arrow--v1.png"
-                            alt="expand-arrow--v1"
-                          />
-                        )}
-                      </span>
-                    </button>
-                    {item.open && (
-                      <p className="text-white font-thin pt-2 border-t border-white">
-                        {item.answer}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -10,13 +10,8 @@ export const metadata = {
 export default function layout({ children }) {
   return (
     <div>
-      <PagesHeader
-        heading={"Explore Our Gears Catalogue "}
-        subline={
-          "Steelman Gears offers a comprehensive range of precision-engineered gears designed to meet the demanding requirements of diverse industries"
-        }
-      />
-      <ProductPage1 />
+      <PagesHeader heading={"Products"} />
+      {/* <ProductPage1 /> */}
       {children}
     </div>
   );

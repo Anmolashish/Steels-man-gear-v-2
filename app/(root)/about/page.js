@@ -10,18 +10,9 @@ import React from "react";
 export default function page() {
   return (
     <>
-      <PagesHeader
-        heading={"Driving Innovation in Gear Technology"}
-        subline={
-          "Discover the Steelman Gears difference: quality, precision, and expertise."
-        }
-      />
+      <PagesHeader heading={"About us"} />
       <AboutPage1 />
       <AboutPage2 />
-      <AboutPage3 />
-      <AboutPage4 />
-      <AboutPage6 />
-      <AboutPage5 />
     </>
   );
 }

@@ -395,8 +395,75 @@ export function Context({ children }) {
       ],
     },
   ];
+
+  const data2 = [
+    {
+      id: 23,
+      name: "Shaper Cutters",
+      heading: "Gear Shaping Tools for Internal and External Gears",
+      subSlug: "shaper-cutters",
+      image: "https://steelmansgears.com/imgs/shank_type_shaper_cutters.jpg",
+      description:
+        "This type of cutter is used to cut internal gears of small diameter and spline holes. They can also be designed for external gears depending on the job.",
+      quality:
+        "Requires precise tooth profiles, accurate cutting edges, and good overall balance.",
+      production:
+        "Manufacturing processes must ensure consistent tooth geometry and high surface finish. Grinding and finishing processes are critical.",
+      manufacturing:
+        "Typically made from high-speed steel or carbide, requiring careful heat treatment and grinding processes.",
+    },
+    {
+      id: 6,
+      name: "Chamfer Hobs",
+      heading: "Bevel Edge Hobs for Chamfering Ring Gears",
+      subSlug: "chamfer-hobs",
+      image: "https://steelmansgears.com/imgs/chamfer_hobs.jpg",
+      description:
+        "Chamfer Hobs are generally used for chamfering of entering end of ring gears. These are available in various types as per drawing of components.",
+      quality:
+        "Precise chamfer angles and smooth transitions are essential for optimal gear performance.",
+      production:
+        "Manufacturing processes must ensure consistent chamfer geometry and high surface finish.",
+      manufacturing:
+        "Grinding and finishing processes are critical to achieving the desired chamfer quality.",
+    },
+
+    {
+      id: 1,
+      name: "Involute Gear Hobs",
+      heading: "Involute Tooth Cutters for Precision Gear Manufacturing",
+      subSlug: "involute-gear-hobs",
+      image: "https://steelmansgears.com/imgs/involute-gear-hobs-big.jpg",
+      description:
+        "Involute Gear Hobs for generating gears of maximum accuracy, manufactured in finishing, pre-shaving with or without protuberance and semi-topping profiles. These are supplied in single or multi-starts in class 'AA', 'A' & 'B'.",
+      quality:
+        "High precision is paramount to ensure accurate involute profiles and smooth gear operation.",
+      production:
+        "Manufacturing processes must be carefully controlled to maintain dimensional accuracy and consistency.",
+      manufacturing:
+        "Advanced manufacturing techniques, such as CNC grinding, are often used to produce high-quality involute gear hobs.",
+    },
+    {
+      id: 7,
+      name: "Inserted Blade Gear Hobs",
+      heading: "Modular Precision Hobs for Cost-Effective Gear Manufacturing",
+      subSlug: "inserted-blade-gear-hobs",
+      image: "https://steelmansgears.com/imgs/inserted_blade_gear_hobs.jpg",
+      description:
+        "Inserted Blade Gear Hobs are manufactured in the range 20 to 32 module having blades of HSS (M-2 or M-35) materials and body made of carbon steel. These hobs save money & time, and damaged blades can also be replaced.",
+      quality:
+        "Precise positioning and secure clamping of the inserted blades are crucial for accurate gear profiles. Blade material and coating quality are vital for tool life and cutting performance.",
+      production:
+        "Requires high-precision manufacturing of the hob body and blade pockets. Blades are often produced separately and then assembled into the hob body.",
+      manufacturing:
+        "Utilizes high-strength materials for the hob body and advanced coatings for the blades. CNC machining and grinding are essential for achieving the required tolerances.",
+    },
+  ];
+
   return (
-    <ProductsData.Provider value={{ data }}>{children}</ProductsData.Provider>
+    <ProductsData.Provider value={{ data, data2 }}>
+      {children}
+    </ProductsData.Provider>
   );
 }
 

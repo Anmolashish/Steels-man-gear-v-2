@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-[#041A33] text-white">
+    <div className="w-full bg-[#041A33] text-white pt-5">
       {/* Footer Container */}
-      <div className="max-w-[1200px] mx-auto py-10 px-6">
+      <div className=" mx-auto px-6">
         {/* Footer Top Section */}
         <div className="grid grid-cols-5 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
           {/* Menu Section */}
@@ -37,35 +37,38 @@ export default function Footer() {
 
           {/* Collections Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Category</h3>
+            <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/products/gear-hobs" className="hover:text-white">
-                  Gear hobs
+                <Link
+                  href="/products/undefined/shaper-cutters"
+                  className="hover:text-white"
+                >
+                  Sharper Cutters
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/gear-cutters"
+                  href="/products/undefined/chamfer-hobs"
                   className="hover:text-white"
                 >
-                  Gear cutters
+                  Chamfer Hobs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/straight-bevel-gear-cutters"
+                  href="/products/undefined/inserted-blade-gear-hobs"
                   className="hover:text-white"
                 >
-                  Bevel gear cutters
+                  Inserted Blade Gear Hobs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/spiral-bevel-gear-cutters"
+                  href="/products/undefined/involute-gear-hobs"
                   className="hover:text-white"
                 >
-                  Custom gear
+                  Involute Gear Hobs
                 </Link>
               </li>
             </ul>
@@ -133,7 +136,7 @@ export default function Footer() {
             >
               <h3 className="text-2xl font-bold text-white w-full flex flex-col items-center justify-center">
                 <img
-                  src="/Images/logo-2.png"
+                  src="/Images/logo-2 (1).png"
                   alt=""
                   className="w-full min-w-[200px]"
                 />
@@ -170,7 +173,7 @@ export default function Footer() {
 
         {/* Copyright Section */}
       </div>
-      <div className="text-center text-gray-500 mt-6 p-2">
+      <div className="text-center text-gray-500 mt-2 p-2">
         2008 © Copyright{" "}
         <a href="https://steelmansgears.com/" className=" text-white">
           www.steelmansgears.com.

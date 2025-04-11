@@ -4,7 +4,7 @@ export default function ProductPage3({ items, slug }) {
   // Ensure data exists before accessing it
 
   return (
-    <div className="w-full h-auto flex justify-center gap-10 pb-10 flex-wrap">
+    <div className="w-full h-auto flex justify-center gap-10 pb-10 flex-wrap mt-5">
       {items.length > 0 ? (
         items.map((element) => (
           <ProductCard
